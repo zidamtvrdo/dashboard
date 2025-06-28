@@ -25,8 +25,11 @@ p {
   word-spacing: 0.6rem;
 }
 
-/* project css */
+html {
+  font-family: "Roboto", "Montserrat", system-ui;
+}
 
+/* project css */
 body {
   display: grid;
   grid-template-columns: 1fr 5fr;
@@ -34,7 +37,7 @@ body {
 
 /* sidebar */
 .main-sidebar {
-  height: 100vh;
+  min-height: 100vh;
   grid-column: 1 / 2;
   background-color: #1992d4;
 }
@@ -101,7 +104,8 @@ ul {
 header {
   display: grid;
   grid-template-rows: 80px 120px;
-  box-shadow: 0px 0px 10px grey;
+  box-shadow: 0px 5px 5px grey;
+  height: 22vh;
 }
 
 .header-search {
@@ -115,7 +119,7 @@ input {
   border-radius: 10px;
   border: none;
   width: 80%;
-  background-color: rgb(235, 231, 231);
+  background-color: #E2E8F0;
 }
 
 .left-search {
@@ -207,6 +211,12 @@ input {
 .content {
   display: grid;
   grid-template-columns: 3fr 1fr;
+  background-color: #E2E8F0;
+  min-height: 78vh;
+}
+
+.projects h1 {
+  padding-left: 100px;
 }
 
 .cards{
@@ -221,10 +231,81 @@ input {
 
 .sides {
   grid-column: 2 / 3;
+  padding-right: 50px;
 }
 
 .card {
-  width: 300px;
+  width: 350px;
   height: 150px;
-  padding: 10px;   
+  padding: 20px;   
+  background-color: white;
+  border-left: 10px solid #1992D4;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px grey;
+  display: grid;
+  font-size: 1.5rem;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 5px #1992D4;
+  width: 355px;
+  height: 155px;
+}
+
+input:focus{
+  background-color: #bfe2f5;
+}
+.card svg {
+  height: 28px;
+}
+
+.card-down {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  gap: 20px;
+}
+
+.announcements {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px grey;
+  font-size: 1.2rem;
+}
+
+.announcements-card {
+  border-bottom: 1px solid grey;
+}
+
+.announcements-card:last-child {
+  border-bottom: none;
+}
+
+.trending {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.trending-card {
+  display: grid;
+  grid-template-columns: 55px auto;
+  align-items: center;
+}
+
+.trending-card h3 {
+  margin-bottom: 5px;
+}
+
+.trending-card p {
+  margin-top: 5px;
+}
+.trending img {
+  border-radius: 50%;
+}
+
+button:hover, a:hover {
+  color: orange; 
 }
