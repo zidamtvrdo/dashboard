@@ -36,7 +36,7 @@ body {
 .main-sidebar {
   height: 100vh;
   grid-column: 1 / 2;
-  background-color: blue;
+  background-color: #1992d4;
 }
 
 .main-sidebar > nav {
@@ -97,19 +97,19 @@ ul {
   list-style-type: none;
 }
 
+/* header */
 header {
   display: grid;
-  grid-template-rows: 50px 80px;
-  padding-top: 10px;
+  grid-template-rows: 80px 100px;
+  box-shadow: 0px 0px 10px grey;
 }
 
 .header-search {
   grid-row: 1 / 2;
   display: grid;
   grid-template-columns: 2fr 1fr;
+  padding-top: 10px;
 }
-
-
 
 input {
   height: 30px;
@@ -119,42 +119,91 @@ input {
   background-color: rgb(235, 231, 231);
 }
 
-.left {
-  display: flex;
+.left-search {
+  display: grid;
+  grid-template-columns: 40px auto;
+  grid-auto-flow: column;
   align-items: center;
   grid-column: 1 / 2;
   padding-left: 30px;
 }
 
-.left > svg {
-  height: 30px;
+.left-search > svg {
+  height: 28px;
 }
 
-.right img {
+.right-search img {
   border-radius: 50%;
 }
 
-.right {
-  display: flex;
+.right-search {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 50px 50px auto;
   grid-column: 2 / 3;
   gap: 20px;
   align-items: center;
 }
 
-.right h3{
+.right-search h3{
   font-size: 2rem;
 }
 
-.right svg {
-  height: 30px;
+.right-search svg {
+  height: 28px;
 }
 
 .header-upload{
   grid-row: 2 / 3;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
 }
 
+.left-upload {
+  display: grid;
+  grid-template-columns: 90px auto;
+  gap: 10px;
+  padding-left: 30px;
+}
+
+.left-upload > img {
+  grid-column: 1 / 2;
+  border-radius: 50%;
+}
+.left-upload > .left-upload-text {
+  grid-column: 2 / 3;
+}
+
+.left-upload-text {
+  display: grid;
+  grid-template-rows: 45px 45px;
+  align-items: end;
+}
+
+.left-upload-text p {
+  align-self: start;
+  font-weight: 700;
+}
+
+.right-upload {
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: center;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+}
+
+.right-upload > button {
+  background-color: #1992d4;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* content */
 .content {
   display: grid;
   grid-template-columns: 3fr 1fr;
